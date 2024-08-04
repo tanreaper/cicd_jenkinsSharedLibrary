@@ -2,7 +2,7 @@
 
 pipeline {
     agent any
-    envoronment {
+    environment {
         credentials('GITHUB-TOKEN')
     }
     parameters {
