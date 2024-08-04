@@ -15,7 +15,7 @@ def call(Map gitHubOption) {
        "private": "${gitHubOption.private}",
        "owner": "${gitHubOption.owner}"
         }' \
-        "${GITHUB_BASE_URL}/user/repos"
+        "${globalVars.GITHUB_BASE_URL}/user/repos"
     """
 }
 
