@@ -26,18 +26,19 @@ pipeline {
                         ]
                     echo "Repository Details: ${repoDetails}"
                     gitHubSetup.checkParams(repoDetails)
+                    gitHubSetup(repoDetails)
     
                     }
 
                 }
             }
         }
-        stage('createRepo') {
-            steps {
-                script {
-                    gitHubSetup(repoDetails)
-                }
-            }
-        }
+        // stage('createRepo') {
+        //     steps {
+        //         script {
+        //             gitHubSetup(repoDetails)
+        //         }
+        //     }
+        // }
     }
 }
