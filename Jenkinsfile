@@ -35,7 +35,7 @@ pipeline {
         stage('createRepo') {
             steps {
                 script {
-                    gitHubSetup()
+                    gitHubSetup(repoDetails)
                 }
             }
         }
