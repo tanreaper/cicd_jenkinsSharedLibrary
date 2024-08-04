@@ -22,8 +22,8 @@ pipeline {
                             owner: params.OWNER
                         ]
                     }  
-                    echo "till here its working"
-                    gitHubSetup.checkParams(repoDetails)
+                    echo "Repository Details: ${repoDetails}"
+                    // gitHubSetup.checkParams(repoDetails)
 
                 }
             }
