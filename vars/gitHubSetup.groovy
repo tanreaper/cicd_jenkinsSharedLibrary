@@ -4,6 +4,7 @@ def call(Map gitHubOption) {
         key, value ->
             println "${key} : ${value}"
     }
+    echo "token: ${TOKEN}"
     // sh """
     //     curl -H "Authorization: token ${TOKEN}" \
     //     -H "Content-Type: application/json" \
