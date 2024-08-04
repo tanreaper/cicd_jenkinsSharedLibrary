@@ -3,7 +3,7 @@
 pipeline {
     agent any
     environment {
-        credentials('GITHUB-TOKEN')
+        def TOKEN = credentials('GITHUB-TOKEN')
     }
     parameters {
         choice          (name: 'GITHUB_REPO', choices:['add', 'delete'], description: 'Add or delete a repository')
