@@ -16,10 +16,10 @@ pipeline {
             steps {
                 script {
                     def repoDetails = [
-                        name: ${GITHUB_REPO_NAME}
-                        description: ${REPO_DESCRIPTION}
-                        private: ${GITHUB_REPO_TYPE}
-                        owner: ${OWNER}
+                        name: ${GITHUB_REPO_NAME},
+                        description: ${REPO_DESCRIPTION},
+                        private: ${GITHUB_REPO_TYPE},
+                        owner: ${OWNER},
                     ]
                     gitHubSetup.checkParams(repoDetails)
                 }
