@@ -21,9 +21,9 @@ pipeline {
                             private: params.GITHUB_REPO_TYPE, // Convert choice to boolean
                             owner: params.OWNER
                         ]
-                    }  
                     echo "Repository Details: ${repoDetails}"
-                    // gitHubSetup.checkParams(repoDetails)
+                    gitHubSetup.checkParams(repoDetails)
+                    }
 
                 }
             }
