@@ -16,14 +16,14 @@ pipeline {
                 script {
                     withCredentials([string(credentialsId: 'GITHUB-TOKEN', variable: 'TOKEN')]) {
                         def repoDetails = [
-                            name: ${GITHUB_REPO_NAME},
-                            description: ${REPO_DESCRIPTION},
-                            private: ${GITHUB_REPO_TYPE},
-                            owner: ${OWNER},
-                        ] 
+                            name: params.GITHUB_REPO_NAME,          // Use params to access pipeline parameters
+                            description: params.REPO_DESCRIPTION,
+                            private: params.GITHUB_REPO_TYPE, // Convert choice to boolean
+                            owner: params.OWNER
+                        ]
                     }  
                     echo "till here its working"
-                    // gitHubSetup.checkParams(repoDetails)
+                    gitHubSetup.checkParams(repoDetails)
 
                 }
             }
