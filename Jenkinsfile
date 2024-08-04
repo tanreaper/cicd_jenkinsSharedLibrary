@@ -21,7 +21,7 @@ pipeline {
                         repoDetails = [
                             name: params.GITHUB_REPO_NAME,          // Use params to access pipeline parameters
                             description: params.REPO_DESCRIPTION,
-                            private: params.GITHUB_REPO_TYPE, // Convert choice to boolean
+                            private: params.GITHUB_REPO_TYPE == 'private', // Convert choice to boolean
                             owner: params.OWNER
                         ]
                         echo "Repository Details: ${repoDetails}"
